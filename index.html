@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            contacts
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="d1">
+            <h2>Contacts</h2>
+            <p>My contacts list</p>
+        </div>
+        <div class="d2">
+            <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+                <input type="text" id="add-contact" placeholder="insert new contact">
+                <input type="submit" value="Add" class="btn-add">
+            </form>
+            <p>Contacts:</p>
+            <p id="counter"></p>
+
+            <table>
+                <tr class="contact">
+                    <th><h3>Contacts</h3></th>
+
+                </tr>
+                <tbody id="contacts">
+                </tbody>
+            </table>
+        </div>
+        <div id="edit" role="aria-hidden">
+            <form action="javascript:void(0);" method="POST" id="save-edit">
+                <input type="text" id="edit-contact">
+                <input type="submit" value="Save" class="btn-edit">
+                <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
